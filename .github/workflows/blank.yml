@@ -50,3 +50,4 @@ jobs:
           pnpm codegen
           pnpm build
           ls
+          pwd
