@@ -37,8 +37,6 @@ jobs:
 
       - name: build patchyvideo
         run: |
-          #echo install pnpm
-          #npm install -g pnpm
           pnpm -v 
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
