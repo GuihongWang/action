@@ -51,3 +51,14 @@ jobs:
           pnpm build
           ls
           pwd
+
+      - name: pack&deploy patchyvideo
+        run: |
+         apt install zip unzip -y
+         zip dist.zip dist
+         cd /home
+         mkdir gui
+         cd gui
+         cp /home/runner/work/action/action/platinum/dist /home/gui/github.io/pv
+         cd /home/gui/github.io/pv
+         ls
