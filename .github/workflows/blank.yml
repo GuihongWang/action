@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env: 
-     ze: ${{ secrets.marisa }}
+     ze1: ${{ secrets.MARISA }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -36,6 +36,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: change to guihong wang
         run: |
+          export ze="$ze1"
           git config --global user.name "guihongwang"
           git config --global user.email "marisa@marisa.ml"
 
