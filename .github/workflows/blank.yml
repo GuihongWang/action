@@ -59,6 +59,6 @@ jobs:
          mkdir github.io
          cd github.io
          mkdir pv
-         cp /home/runner/work/action/action/platinum/dist.zip /home/runner/gui/github.io/pv/
-         cd /home/gui/github.io/pv
+         cp -r /home/runner/work/action/action/platinum/dist/* /home/runner/gui/github.io/pv/
+         cd /home/runner/gui/github.io/pv/
          ls
