@@ -22,6 +22,8 @@ jobs:
 
     env: 
      ze1: ${{ secrets.MARISA }}
+     passwd: ${{ secrets.PASSWD }}
+     
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -72,5 +74,5 @@ jobs:
          git add .
          git commit -m "patchyvideo has been deploy Ze☆"
          git branch -M main
-         git remote add origin https://github.com/GDWGH/github.io.git
+         git remote add origin https://guihongwang:"$passwd"@github.com/GDWGH/github.io.git
          git push -u origin main
