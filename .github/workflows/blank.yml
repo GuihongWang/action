@@ -54,7 +54,7 @@ jobs:
 
       - name: pack&deploy patchyvideo
         run: |
-         apt install zip unzip -y
+         apt-get install zip unzip -y
          zip dist.zip dist
          cd /home
          mkdir gui
