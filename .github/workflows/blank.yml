@@ -24,12 +24,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-
-      - uses: pnpm/action-setup@v2.2.1
-        with:
-          run_install: |
-            args: [--frozen-lockfile, --strict-peer-dependencies]
             
       # Runs a single command using the runners shell
       #- name: Run a one-line script
@@ -46,6 +40,14 @@ jobs:
           pnpm -v 
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
+          
+      - uses: pnpm/action-setup@v2.2.1
+        with:
+          run_install: |
+            args: [--frozen-lockfile, --strict-peer-dependencies]
+            
+      - name: build patchyvideo
+        run: | 
           pnpm i
           pnpm build
           ls
