@@ -51,6 +51,7 @@ jobs:
       - name: pack&deploy patchyvideo
         run: |
          sudo apt-get install zip unzip -y
+         cd /home/runner/work/action/action/platinum
          zip dist.zip dist
          cd /home
          mkdir gui
