@@ -53,9 +53,9 @@ jobs:
          sudo apt-get install zip unzip -y
          cd /home/runner/work/action/action/platinum
          zip dist.zip dist
-         cd /home
+         cd 
          mkdir gui
          cd gui
-         cp /home/runner/work/action/action/platinum/dist /home/gui/github.io/pv
+         cp /home/runner/work/action/action/platinum/dist /home/runner/gui/github.io/pv
          cd /home/gui/github.io/pv
          ls
