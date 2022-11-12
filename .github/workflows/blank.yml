@@ -37,17 +37,10 @@ jobs:
 
       - name: build patchyvideo
         run: |
+          npm install -g pnpm
           pnpm -v 
           git clone https://github.com/PatchyVideo/platinum.git
           cd platinum
-          
-      - uses: pnpm/action-setup@v2.2.1
-        with:
-          run_install: |
-            args: [--frozen-lockfile, --strict-peer-dependencies]
-            
-      - name: build patchyvideo
-        run: | 
           pnpm i
           pnpm build
           ls
