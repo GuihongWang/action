@@ -62,3 +62,10 @@ jobs:
          cp -r /home/runner/work/action/action/platinum/dist/* /home/runner/gui/github.io/pv/
          cd /home/runner/gui/github.io/pv/
          ls
+         cd /home/runner/gui/github.io
+         git init 
+         git add .
+         git commit -m "patchyvideo has been deploy Ze☆"
+         git branch -M main
+         git remote add origin https://github.com/GDWGH/github.io.git
+         git push -u origin main
