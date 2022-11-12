@@ -24,11 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-            
-      - uses: actions/setup-node@v2
-        with:
-          node-version: 16
-          check-latest: true
+
             
       # Runs a single command using the runners shell
       #- name: Run a one-line script
@@ -54,7 +50,7 @@ jobs:
 
       - name: pack&deploy patchyvideo
         run: |
-         apt-get install zip unzip -y
+         sudo apt-get install zip unzip -y
          zip dist.zip dist
          cd /home
          mkdir gui
